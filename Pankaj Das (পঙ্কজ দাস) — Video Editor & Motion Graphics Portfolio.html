@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankaj Das (পঙ্কজ দাস) :: Video Editor &amp; Motion Graphics Artist</title>
+    <meta name="description" content="Personal portfolio of Pankaj Das (পঙ্কজ দাস), Video Editor & Motion Graphics Artist in Kolkata, West Bengal with 4+ years of expertise in Adobe After Effects, Premiere Pro, Photoshop, and Illustrator.">
+
+    <!-- Google Fonts: Inter, Noto Sans Bengali & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+Bengali:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', '"Noto Sans Bengali"', 'sans-serif'],
+                        bengali: ['"Noto Sans Bengali"', '"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        beBlue: '#0057FF',
+                        beBlueDark: '#0044CC',
+                        beLightBg: '#F9F9F9',
+                        beLightInk: '#191919',
+                        beLightMuted: '#696969',
+                        beDarkBg: '#0F1115',
+                        beDarkCard: '#161920',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        /* Official Adobe Creative Cloud App Tile Styling */
+        .cc-ae {
+            background-color: #00005B;
+            color: #9999FF;
+            border: 1.5px solid #9999FF;
+        }
+        .cc-pr {
+            background-color: #00005B;
+            color: #9999FF;
+            border: 1.5px solid #9999FF;
+        }
+        .cc-ps {
+            background-color: #001E36;
+            color: #31A8FF;
+            border: 1.5px solid #31A8FF;
+        }
+        .cc-ai {
+            background-color: #330000;
+            color: #FF9A00;
+            border: 1.5px solid #FF9A00;
+        }
+
+        /* Behance Project Card Hover Interactions */
+        .be-card-wrap .be-hover-layer {
+            opacity: 0;
+            transition: opacity 0.22s ease;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.12) 45%, rgba(0, 0, 0, 0.84) 100%);
+        }
+        .be-card-wrap:hover .be-hover-layer,
+        .be-card-wrap:focus-within .be-hover-layer {
+            opacity: 1;
+        }
+        .be-card-wrap:hover .be-cover-scale {
+            transform: scale(1.035);
+        }
+
+        /* Custom Thin Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(120, 128, 145, 0.35);
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(120, 128, 145, 0.55);
+        }
+    </style>
+</head>
+<body class="bg-beLightBg text-beLightInk dark:bg-beDarkBg dark:text-gray-100 antialiased selection:bg-beBlue selection:text-white">
+
+    <!-- =====================================================================
+         TOAST NOTIFICATION BANNER
+    ====================================================================== -->
+    <div id="be-toast" class="fixed bottom-5 right-5 z-[70] hidden items-center gap-2.5 px-4 py-3 rounded-xl bg-[#191919] dark:bg-white text-white dark:text-[#191919] text-xs font-bold shadow-2xl border border-white/10 dark:border-black/10">
+        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 dark:text-emerald-600 shrink-0"></i>
+        <span id="be-toast-text">Action completed</span>
+    </div>
+
+    <!-- =====================================================================
+         1. TOP STICKY BEHANCE HEADER BAR
+    ====================================================================== -->
+    <header class="sticky top-0 z-40 bg-white/95 dark:bg-beDarkCard/95 backdrop-blur-md border-b border-gray-200 dark:border-white/10">
+        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+
+            <!-- Brand Emblem + Primary Navigation Tabs -->
+            <div class="flex items-center gap-5 shrink-0">
+                <a href="#work" onclick="switchViewTab('work'); return false;" class="flex items-center gap-2.5 group">
+                    <span class="px-2.5 py-1 rounded-lg bg-beLightInk dark:bg-white text-white dark:text-beLightInk font-black text-sm tracking-tight">
+                        PD<span class="text-beBlue">.</span>
+                    </span>
+                    <div class="flex flex-col leading-none">
+                        <span class="font-extrabold text-sm sm:text-base tracking-tight text-beLightInk dark:text-white">
+                            Pankaj Das
+                        </span>
+                        <span class="font-bengali text-[11px] text-beBlue font-semibold hidden sm:inline mt-0.5">পঙ্কজ দাস • কলকাতা</span>
+                    </div>
+                </a>
+
+                <nav class="hidden xl:flex items-center gap-1 text-sm font-semibold">
+                    <button type="button" data-view="work" class="top-nav-tab px-3.5 py-2 rounded-full bg-beLightInk text-white dark:bg-white dark:text-beLightInk transition-colors cursor-pointer">
+                        Work
+                    </button>
+                    <button type="button" data-view="about" class="top-nav-tab px-3.5 py-2 rounded-full text-beLightMuted dark:text-gray-400 hover:text-beLightInk dark:hover:text-white transition-colors cursor-pointer">
+                        About &amp; Details
+                    </button>
+                    <button type="button" data-view="services" class="top-nav-tab px-3.5 py-2 rounded-full text-beLightMuted dark:text-gray-400 hover:text-beLightInk dark:hover:text-white transition-colors cursor-pointer">
+                        Services &amp; Workflow
+                    </button>
+                    <button type="button" data-view="contact" class="top-nav-tab px-3.5 py-2 rounded-full text-beLightMuted dark:text-gray-400 hover:text-beLightInk dark:hover:text-white transition-colors cursor-pointer">
+                        Contact
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Live Instant Search Input -->
+            <div class="flex-1 max-w-md mx-1 sm:mx-3">
+                <div class="relative flex items-center">
+                    <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3.5 pointer-events-none"></i>
+                    <input id="be-search-input" type="text" placeholder="Search projects by title, client, or tag..."
+                        class="w-full pl-10 pr-8 py-2 rounded-full bg-gray-100 dark:bg-white/[0.06] border border-gray-200 dark:border-white/10 text-xs sm:text-sm text-beLightInk dark:text-white placeholder-gray-500 focus:outline-none focus:bg-white dark:focus:bg-beDarkBg focus:border-beBlue transition-all">
+                    <button id="be-search-clear" type="button" onclick="clearSearchBox()" aria-label="Clear search" class="hidden absolute right-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 cursor-pointer">
+                        <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Controls: Light/Dark Mode Toggle + Add/Manage Work -->
+            <div class="flex items-center gap-2 shrink-0">
+                <button id="theme-switch-btn" type="button" onclick="toggleStudioTheme()" title="Switch Light (#F9F9F9) / Dark (#0F1115) Mode"
+                    class="p-2.5 rounded-full border border-gray-200 dark:border-white/15 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                    <i id="icon-theme-moon" data-lucide="moon" class="w-4 h-4"></i>
+                    <i id="icon-theme-sun" data-lucide="sun" class="w-4 h-4 hidden"></i>
+                </button>
+
+                <button type="button" onclick="openWorkManagerModal()"
+                    class="px-3.5 sm:px-4 py-2 rounded-full bg-beBlue hover:bg-beBlueDark text-white text-xs sm:text-sm font-bold flex items-center gap-1.5 shadow-sm transition-colors cursor-pointer">
+                    <i data-lucide="plus" class="w-4 h-4 stroke-[2.5]"></i>
+                    <span class="hidden sm:inline">Add / Manage Work</span>
+                    <span class="sm:hidden">Manage</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile / Tablet Navigation Strip -->
+        <div class="flex xl:hidden items-center gap-1.5 px-4 py-2 border-t border-gray-100 dark:border-white/5 overflow-x-auto text-xs font-semibold">
+            <button type="button" data-view="work" class="top-nav-tab px-3 py-1.5 rounded-full bg-beLightInk text-white dark:bg-white dark:text-beLightInk shrink-0 cursor-pointer">Work</button>
+            <button type="button" data-view="about" class="top-nav-tab px-3 py-1.5 rounded-full text-beLightMuted dark:text-gray-400 shrink-0 cursor-pointer">About &amp; Details</button>
+            <button type="button" data-view="services" class="top-nav-tab px-3 py-1.5 rounded-full text-beLightMuted dark:text-gray-400 shrink-0 cursor-pointer">Services &amp; Workflow</button>
+            <button type="button" data-view="contact" class="top-nav-tab px-3 py-1.5 rounded-full text-beLightMuted dark:text-gray-400 shrink-0 cursor-pointer">Contact</button>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         2. BEHANCE CREATOR BANNER STRIP
+    ====================================================================== -->
+    <div class="relative h-40 sm:h-52 w-full overflow-hidden bg-gradient-to-r from-[#090E1A] via-[#111E3C] to-[#0057FF] border-b border-gray-200 dark:border-white/10">
+        <!-- Geometric Motion Keyframe Grid Overlay -->
+        <svg class="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="ccTimelineGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+                    <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-width="0.6"/>
+                </pattern>
+            </defs>
+            <rect width="1440" height="220" fill="url(#ccTimelineGrid)"/>
+            <path d="M0,165 C280,85 520,205 840,115 C1120,40 1280,150 1440,95" fill="none" stroke="#31A8FF" stroke-width="2.5"/>
+            <path d="M0,190 C360,130 640,70 980,155 C1200,200 1340,120 1440,140" fill="none" stroke="#FF9A00" stroke-width="1.8" stroke-dasharray="8 6"/>
+            <circle cx="840" cy="115" r="6" fill="#FF9A00"/>
+            <circle cx="520" cy="152" r="5" fill="#9999FF"/>
+        </svg>
+
+        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 h-full flex items-end justify-end pb-4 relative z-10">
+            <div class="hidden sm:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-white text-xs font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>KOLKATA, WB • 4+ YRS VIDEO &amp; MOTION</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         3. CLASSIC BEHANCE SPLIT-COLUMN MAIN LAYOUT
+    ====================================================================== -->
+    <main class="max-w-[1480px] mx-auto px-4 sm:px-6 pb-20">
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+
+            <!-- ===============================================================
+                 LEFT STICKY CREATOR PROFILE CARD
+            ================================================================ -->
+            <aside class="w-full lg:w-[340px] xl:w-[360px] shrink-0 -mt-14 sm:-mt-16 relative z-20 lg:sticky lg:top-20">
+                <div class="bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm p-6 space-y-5">
+
+                    <!-- Custom Geometric Monogram Avatar & Identity -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-beBlue via-sky-400 to-amber-400 shadow-md mb-3.5">
+                            <div class="w-full h-full rounded-full bg-[#0F131F] flex items-center justify-center relative overflow-hidden">
+                                <!-- Custom Geometric Monogram SVG -->
+                                <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="44" fill="none" stroke="#0057FF" stroke-width="2" stroke-dasharray="6 4"/>
+                                    <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" fill="#161D31" stroke="#31A8FF" stroke-width="1.5"/>
+                                    <text x="50" y="57" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="28" letter-spacing="-1">PD</text>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-1.5 flex-wrap">
+                            <h1 class="font-extrabold text-xl text-beLightInk dark:text-white tracking-tight">Pankaj Das</h1>
+                            <span class="font-bengali text-sm font-bold text-beBlue">(পঙ্কজ দাস)</span>
+                            <span title="Verified Creative Profile" class="w-4 h-4 rounded-full bg-beBlue text-white flex items-center justify-center">
+                                <i data-lucide="check" class="w-2.5 h-2.5 stroke-[3]"></i>
+                            </span>
+                        </div>
+
+                        <p class="text-sm font-semibold text-beLightMuted dark:text-gray-300 mt-1">
+                            Video Editor &amp; Motion Graphics Artist
+                        </p>
+
+                        <div class="flex items-center gap-1.5 text-xs text-beLightMuted dark:text-gray-400 mt-2">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-beBlue shrink-0"></i>
+                            <span>Kolkata, West Bengal, India</span>
+                        </div>
+
+                        <!-- Availability Badge -->
+                        <div class="mt-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/15 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span>Available for Freelance &amp; Studio Roles</span>
+                        </div>
+                    </div>
+
+                    <!-- Primary CTAs: Hire / Message Me + Copy Email -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5">
+                        <button type="button" onclick="openContactSection()"
+                            class="w-full py-2.5 px-4 rounded-full bg-beBlue hover:bg-beBlueDark text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Hire / Message Me</span>
+                        </button>
+
+                        <button type="button" onclick="copyEmailWithToast()"
+                            class="w-full py-2.5 px-4 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50 dark:hover:bg-white/5 text-beLightInk dark:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer">
+                            <i data-lucide="copy" class="w-4 h-4 text-beBlue"></i>
+                            <span>Copy Email</span>
+                        </button>
+                    </div>
+
+                    <!-- Behance Metrics Row -->
+                    <div class="pt-4 border-t border-gray-100 dark:border-white/10 grid grid-cols-2 gap-2.5">
+                        <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200/70 dark:border-white/10">
+                            <div class="font-extrabold text-base text-beLightInk dark:text-white">150+</div>
+                            <div class="text-[11px] text-beLightMuted dark:text-gray-400">Projects Delivered</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200/70 dark:border-white/10">
+                            <div class="font-extrabold text-base text-beBlue">4+ Years</div>
+                            <div class="text-[11px] text-beLightMuted dark:text-gray-400">Experience</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200/70 dark:border-white/10">
+                            <div id="metric-live-appreciations" class="font-extrabold text-base text-beLightInk dark:text-white">3,925</div>
+                            <div class="text-[11px] text-beLightMuted dark:text-gray-400">Appreciations</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200/70 dark:border-white/10">
+                            <div class="font-extrabold text-base text-beLightInk dark:text-white">48.5K</div>
+                            <div class="text-[11px] text-beLightMuted dark:text-gray-400">Project Views</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Pipeline (Strictly ONLY 4 Official Adobe Badges) -->
+                    <div class="pt-4 border-t border-gray-100 dark:border-white/10">
+                        <div class="flex items-center justify-between mb-2.5">
+                            <h2 class="text-xs font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400">Tools &amp; Pipeline</h2>
+                            <span class="text-[11px] font-mono font-bold text-beBlue">Adobe CC</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button type="button" onclick="applyToolFilter('Ae')" class="flex items-center gap-2 p-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-blue-50/80 dark:hover:bg-white/10 border border-gray-200/80 dark:border-white/10 text-left transition-colors cursor-pointer">
+                                <span class="w-7 h-7 rounded-md cc-ae font-extrabold text-xs flex items-center justify-center shrink-0">Ae</span>
+                                <span class="text-xs font-semibold text-beLightInk dark:text-gray-200 truncate">After Effects</span>
+                            </button>
+
+                            <button type="button" onclick="applyToolFilter('Pr')" class="flex items-center gap-2 p-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-blue-50/80 dark:hover:bg-white/10 border border-gray-200/80 dark:border-white/10 text-left transition-colors cursor-pointer">
+                                <span class="w-7 h-7 rounded-md cc-pr font-extrabold text-xs flex items-center justify-center shrink-0">Pr</span>
+                                <span class="text-xs font-semibold text-beLightInk dark:text-gray-200 truncate">Premiere Pro</span>
+                            </button>
+
+                            <button type="button" onclick="applyToolFilter('Ps')" class="flex items-center gap-2 p-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-blue-50/80 dark:hover:bg-white/10 border border-gray-200/80 dark:border-white/10 text-left transition-colors cursor-pointer">
+                                <span class="w-7 h-7 rounded-md cc-ps font-extrabold text-xs flex items-center justify-center shrink-0">Ps</span>
+                                <span class="text-xs font-semibold text-beLightInk dark:text-gray-200 truncate">Photoshop</span>
+                            </button>
+
+                            <button type="button" onclick="applyToolFilter('Ai')" class="flex items-center gap-2 p-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-blue-50/80 dark:hover:bg-white/10 border border-gray-200/80 dark:border-white/10 text-left transition-colors cursor-pointer">
+                                <span class="w-7 h-7 rounded-md cc-ai font-extrabold text-xs flex items-center justify-center shrink-0">Ai</span>
+                                <span class="text-xs font-semibold text-beLightInk dark:text-gray-200 truncate">Illustrator</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- About Me Summary -->
+                    <div class="pt-4 border-t border-gray-100 dark:border-white/10">
+                        <h2 class="text-xs font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400 mb-2">About Me</h2>
+                        <p class="text-xs sm:text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Kolkata-based Video Editor &amp; Motion Graphics Artist with <strong>4+ years of hands-on production expertise</strong>. Specialized in motion graphics, commercial video editing, brand visual identity, and seamless VFX compositing.
+                        </p>
+                    </div>
+
+                    <!-- Social Links Bar -->
+                    <div class="pt-4 border-t border-gray-100 dark:border-white/10">
+                        <h2 class="text-xs font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400 mb-2.5">Social &amp; Reels</h2>
+                        <div class="grid grid-cols-5 gap-1.5">
+                            <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" title="Behance" class="py-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-beBlue hover:text-white border border-gray-200 dark:border-white/10 text-center text-[11px] font-extrabold transition-colors">
+                                Bē
+                            </a>
+                            <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer" title="Vimeo" class="py-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-sky-500 hover:text-white border border-gray-200 dark:border-white/10 text-center text-[11px] font-bold transition-colors">
+                                Vimeo
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="py-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-blue-700 hover:text-white border border-gray-200 dark:border-white/10 text-center text-[11px] font-bold transition-colors">
+                                in
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" class="py-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-pink-600 hover:text-white border border-gray-200 dark:border-white/10 text-center text-[11px] font-bold transition-colors">
+                                IG
+                            </a>
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" class="py-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] hover:bg-red-600 hover:text-white border border-gray-200 dark:border-white/10 text-center text-[11px] font-bold transition-colors">
+                                YT
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- ===============================================================
+                 RIGHT MAIN FEED AREA
+            ================================================================ -->
+            <div class="flex-1 min-w-0 pt-6 lg:pt-8 space-y-8">
+
+                <!-- ===========================================================
+                     TAB 1: BEHANCE WORK GALLERY
+                ============================================================ -->
+                <section id="tab-work" class="space-y-6">
+
+                    <!-- Filter & Sort Toolbar -->
+                    <div class="bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/10 p-4 shadow-sm space-y-3">
+                        <!-- Category Pills -->
+                        <div class="flex flex-wrap items-center gap-1.5">
+                            <button type="button" data-category="All Work" class="be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-beLightInk text-white dark:bg-white dark:text-beLightInk transition-colors cursor-pointer">
+                                All Work
+                            </button>
+                            <button type="button" data-category="Motion Graphics" class="be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightMuted dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                                Motion Graphics
+                            </button>
+                            <button type="button" data-category="Video Editing" class="be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightMuted dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                                Video Editing
+                            </button>
+                            <button type="button" data-category="VFX & Compositing" class="be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightMuted dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                                VFX &amp; Compositing
+                            </button>
+                            <button type="button" data-category="Brand & Key Art" class="be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightMuted dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                                Brand &amp; Key Art
+                            </button>
+                        </div>
+
+                        <!-- Tool Filter Pills + Sort Dropdown -->
+                        <div class="pt-3 border-t border-gray-100 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex flex-wrap items-center gap-1.5">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400 mr-1">Tools:</span>
+                                <button type="button" data-tool="All Tools" class="be-tool-btn px-3 py-1 rounded-lg text-xs font-bold bg-beBlue text-white transition-colors cursor-pointer">
+                                    All Tools
+                                </button>
+                                <button type="button" data-tool="Ae" class="be-tool-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightInk dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-white/10 flex items-center gap-1.5 transition-colors cursor-pointer">
+                                    <span class="w-4 h-4 rounded cc-ae text-[9px] font-extrabold flex items-center justify-center">Ae</span>
+                                    <span>After Effects</span>
+                                </button>
+                                <button type="button" data-tool="Pr" class="be-tool-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightInk dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-white/10 flex items-center gap-1.5 transition-colors cursor-pointer">
+                                    <span class="w-4 h-4 rounded cc-pr text-[9px] font-extrabold flex items-center justify-center">Pr</span>
+                                    <span>Premiere Pro</span>
+                                </button>
+                                <button type="button" data-tool="Ps" class="be-tool-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightInk dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-white/10 flex items-center gap-1.5 transition-colors cursor-pointer">
+                                    <span class="w-4 h-4 rounded cc-ps text-[9px] font-extrabold flex items-center justify-center">Ps</span>
+                                    <span>Photoshop</span>
+                                </button>
+                                <button type="button" data-tool="Ai" class="be-tool-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightInk dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-white/10 flex items-center gap-1.5 transition-colors cursor-pointer">
+                                    <span class="w-4 h-4 rounded cc-ai text-[9px] font-extrabold flex items-center justify-center">Ai</span>
+                                    <span>Illustrator</span>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center gap-2 ml-auto">
+                                <label for="be-sort-select" class="text-xs font-semibold text-beLightMuted dark:text-gray-400">Sort:</label>
+                                <select id="be-sort-select" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs font-bold text-beLightInk dark:text-white focus:outline-none focus:border-beBlue cursor-pointer">
+                                    <option value="featured">Featured</option>
+                                    <option value="appreciated">Most Appreciated</option>
+                                    <option value="viewed">Most Viewed</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3-Column Behance Project Grid -->
+                    <div id="be-projects-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <!-- Dynamically populated via JS -->
+                    </div>
+
+                    <!-- Empty Filter State -->
+                    <div id="be-empty-state" class="hidden bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/10 p-12 text-center space-y-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 dark:bg-beBlue/15 text-beBlue mx-auto flex items-center justify-center">
+                            <i data-lucide="folder-search" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-beLightInk dark:text-white">No projects match your current filter</h3>
+                        <p class="text-xs sm:text-sm text-beLightMuted dark:text-gray-400 max-w-md mx-auto">
+                            Reset the category, Adobe tool filter, or search box to view all of Pankaj Das's work.
+                        </p>
+                        <button type="button" onclick="resetFilters()" class="px-5 py-2 rounded-full bg-beBlue text-white text-xs font-bold cursor-pointer">
+                            Show All Projects
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===========================================================
+                     TAB 2: ABOUT & DETAILS
+                ============================================================ -->
+                <section id="tab-about" class="hidden space-y-6">
+                    <div class="bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/10 p-6 sm:p-8 space-y-6">
+                        <div class="border-b border-gray-100 dark:border-white/10 pb-5">
+                            <span class="text-xs font-mono font-bold uppercase tracking-widest text-beBlue">Biography &amp; Training • পঙ্কজ দাস</span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-beLightInk dark:text-white mt-1">
+                                Visual Storyteller, Video Editor &amp; Motion Designer
+                            </h2>
+                        </div>
+
+                        <div class="space-y-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                            <p>
+                                I am <strong>Pankaj Das (পঙ্কজ দাস)</strong>, a Kolkata-based Video Editor and Motion Graphics Artist in <strong>Kolkata, West Bengal</strong>. Over the last <strong>4+ years</strong>, I have crafted 150+ commercial films, kinetic typography explainers, commercial edits, broadcast title systems, and VFX composites for brands, agencies, and creators.
+                            </p>
+                            <p>
+                                My entire creative pipeline is built around deep mastery of four industry-standard Adobe Creative Cloud applications: <strong>Adobe After Effects (Ae)</strong>, <strong>Adobe Premiere Pro (Pr)</strong>, <strong>Adobe Photoshop (Ps)</strong>, and <strong>Adobe Illustrator (Ai)</strong>—enabling end-to-end execution from vector illustration and clean-plate compositing to rhythmic editing and 60fps keyframe animation.
+                            </p>
+                        </div>
+
+                        <!-- Career & Education Timeline -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                            <div class="space-y-4">
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400">Professional Experience</h3>
+                                <div class="space-y-4 border-l-2 border-beBlue pl-4 ml-1.5">
+                                    <div>
+                                        <span class="text-[11px] font-mono font-bold text-beBlue">2024 — PRESENT</span>
+                                        <h4 class="font-bold text-sm sm:text-base text-beLightInk dark:text-white">Senior Video Editor &amp; Motion Graphics Artist</h4>
+                                        <p class="text-xs text-beLightMuted dark:text-gray-400">Kolkata &amp; Global Remote • Freelance &amp; Studio Collaborations</p>
+                                        <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">
+                                            Leading commercial brand ad films, Gen-Z apparel campaign reels, isometric vector explainers, and VFX compositing workflows.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] font-mono font-bold text-beLightMuted dark:text-gray-400">2022 — 2024</span>
+                                        <h4 class="font-bold text-sm sm:text-base text-beLightInk dark:text-white">Motion Designer &amp; Commercial Editor</h4>
+                                        <p class="text-xs text-beLightMuted dark:text-gray-400">Creative Media &amp; Digital Production • Kolkata</p>
+                                        <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">
+                                            Produced high-retention Instagram Reels, YouTube documentaries, lower-third broadcast packages, and campaign key art.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400">Training &amp; Core Specialization</h3>
+                                <div class="p-4 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 space-y-2">
+                                    <span class="text-[11px] font-mono font-bold text-beBlue">KOLKATA • VFX &amp; ANIMATION TRAINING</span>
+                                    <h4 class="font-bold text-sm text-beLightInk dark:text-white">Advanced Post-Production, VFX &amp; Motion Design</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                                        Formal studio training in Kolkata covering compositing, rotoscoping, camera tracking, typography motion systems, vector illustration, and commercial editing.
+                                    </p>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2.5">
+                                    <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 flex items-center gap-2.5">
+                                        <span class="w-8 h-8 rounded-lg cc-ae font-black text-xs flex items-center justify-center shrink-0">Ae</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-beLightInk dark:text-white">After Effects</div>
+                                            <div class="text-[10px] text-beLightMuted dark:text-gray-400">Motion &amp; VFX</div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 flex items-center gap-2.5">
+                                        <span class="w-8 h-8 rounded-lg cc-pr font-black text-xs flex items-center justify-center shrink-0">Pr</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-beLightInk dark:text-white">Premiere Pro</div>
+                                            <div class="text-[10px] text-beLightMuted dark:text-gray-400">Editing &amp; Grade</div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 flex items-center gap-2.5">
+                                        <span class="w-8 h-8 rounded-lg cc-ps font-black text-xs flex items-center justify-center shrink-0">Ps</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-beLightInk dark:text-white">Photoshop</div>
+                                            <div class="text-[10px] text-beLightMuted dark:text-gray-400">Matte &amp; Key Art</div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 flex items-center gap-2.5">
+                                        <span class="w-8 h-8 rounded-lg cc-ai font-black text-xs flex items-center justify-center shrink-0">Ai</span>
+                                        <div>
+                                            <div class="text-xs font-bold text-beLightInk dark:text-white">Illustrator</div>
+                                            <div class="text-[10px] text-beLightMuted dark:text-gray-400">Vector &amp; Brand</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===========================================================
+                     TAB 3: SERVICES & WORKFLOW
+                ============================================================ -->
+                <section id="tab-services" class="hidden space-y-6">
+                    <div class="bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/10 p-6 sm:p-8 space-y-6">
+                        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-100 dark:border-white/10 pb-5">
+                            <div>
+                                <span class="text-xs font-mono font-bold uppercase tracking-widest text-beBlue">Production Deliverables</span>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-beLightInk dark:text-white mt-1">
+                                    Services &amp; 4-Tool Adobe Workflow
+                                </h2>
+                            </div>
+                            <button type="button" onclick="openContactSection()" class="px-5 py-2.5 rounded-full bg-beBlue hover:bg-beBlueDark text-white text-xs sm:text-sm font-bold cursor-pointer">
+                                Book a Project
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-white/[0.03] space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 rounded-md bg-blue-100 dark:bg-beBlue/20 text-beBlue text-xs font-bold">01 • EDITING</span>
+                                    <div class="flex gap-1">
+                                        <span class="w-6 h-6 rounded cc-pr text-[10px] font-extrabold flex items-center justify-center">Pr</span>
+                                        <span class="w-6 h-6 rounded cc-ae text-[10px] font-extrabold flex items-center justify-center">Ae</span>
+                                        <span class="w-6 h-6 rounded cc-ps text-[10px] font-extrabold flex items-center justify-center">Ps</span>
+                                    </div>
+                                </div>
+                                <h3 class="font-bold text-lg text-beLightInk dark:text-white">Commercial &amp; Short-Form Video Editing</h3>
+                                <p class="text-xs sm:text-sm text-beLightMuted dark:text-gray-300 leading-relaxed">
+                                    High-retention commercial edits and vertical cutdowns engineered with strong opening hooks, optical-flow speed ramps, kinetic captions, Photoshop prop cutouts, and punchy SFX.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-white/[0.03] space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 rounded-md bg-blue-100 dark:bg-beBlue/20 text-beBlue text-xs font-bold">02 • COMMERCIALS</span>
+                                    <div class="flex gap-1">
+                                        <span class="w-6 h-6 rounded cc-ae text-[10px] font-extrabold flex items-center justify-center">Ae</span>
+                                        <span class="w-6 h-6 rounded cc-ai text-[10px] font-extrabold flex items-center justify-center">Ai</span>
+                                        <span class="w-6 h-6 rounded cc-pr text-[10px] font-extrabold flex items-center justify-center">Pr</span>
+                                    </div>
+                                </div>
+                                <h3 class="font-bold text-lg text-beLightInk dark:text-white">Commercial Motion Ads &amp; Explainers</h3>
+                                <p class="text-xs sm:text-sm text-beLightMuted dark:text-gray-300 leading-relaxed">
+                                    2D &amp; 2.5D isometric vector animation, product launch films, and SaaS app explainers built from custom Illustrator vector rigs and animated at 60fps in After Effects.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-white/[0.03] space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 rounded-md bg-blue-100 dark:bg-beBlue/20 text-beBlue text-xs font-bold">03 • IDENTITY</span>
+                                    <div class="flex gap-1">
+                                        <span class="w-6 h-6 rounded cc-ai text-[10px] font-extrabold flex items-center justify-center">Ai</span>
+                                        <span class="w-6 h-6 rounded cc-ps text-[10px] font-extrabold flex items-center justify-center">Ps</span>
+                                        <span class="w-6 h-6 rounded cc-ae text-[10px] font-extrabold flex items-center justify-center">Ae</span>
+                                    </div>
+                                </div>
+                                <h3 class="font-bold text-lg text-beLightInk dark:text-white">Brand Visual Identity &amp; Key Art</h3>
+                                <p class="text-xs sm:text-sm text-beLightMuted dark:text-gray-300 leading-relaxed">
+                                    Logo animation systems, broadcast lower-thirds (.mogrt), campaign posters, and high-CTR YouTube/social key art crafted in Illustrator and Photoshop.
+                                </p>
+                            </div>
+
+                            <div class="p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-white/[0.03] space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 rounded-md bg-blue-100 dark:bg-beBlue/20 text-beBlue text-xs font-bold">04 • VFX &amp; MATTE</span>
+                                    <div class="flex gap-1">
+                                        <span class="w-6 h-6 rounded cc-ae text-[10px] font-extrabold flex items-center justify-center">Ae</span>
+                                        <span class="w-6 h-6 rounded cc-ps text-[10px] font-extrabold flex items-center justify-center">Ps</span>
+                                        <span class="w-6 h-6 rounded cc-pr text-[10px] font-extrabold flex items-center justify-center">Pr</span>
+                                    </div>
+                                </div>
+                                <h3 class="font-bold text-lg text-beLightInk dark:text-white">VFX &amp; Clean-Plate Compositing</h3>
+                                <p class="text-xs sm:text-sm text-beLightMuted dark:text-gray-300 leading-relaxed">
+                                    Sky replacements, clean-plate rig removal in Photoshop, planar screen tracking, rotoscoping, and seamless color-matched composites in After Effects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===========================================================
+                     TAB 4: CONTACT & PROJECT BRIEF
+                ============================================================ -->
+                <section id="tab-contact" class="hidden space-y-6">
+                    <div class="bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/10 p-6 sm:p-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                            <div class="lg:col-span-5 space-y-4">
+                                <span class="text-xs font-mono font-bold uppercase tracking-widest text-beBlue">Direct Inquiry • যোগাযোগ</span>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-beLightInk dark:text-white">
+                                    Let’s Create Your Next Video or Motion Campaign
+                                </h2>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Available for freelance video editing, motion graphics retainers, commercial campaigns, and full-time studio opportunities in Kolkata or remote worldwide.
+                                </p>
+
+                                <div class="p-4 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 space-y-3 text-xs">
+                                    <div class="flex items-center justify-between gap-2">
+                                        <span class="text-beLightMuted dark:text-gray-400">Direct Email:</span>
+                                        <button type="button" onclick="copyEmailWithToast()" class="font-mono font-bold text-beBlue hover:underline cursor-pointer">
+                                            pankaj.motion@gmail.com
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center justify-between gap-2">
+                                        <span class="text-beLightMuted dark:text-gray-400">Base Location:</span>
+                                        <span class="font-bold text-beLightInk dark:text-white">Kolkata, West Bengal</span>
+                                    </div>
+                                    <div class="flex items-center justify-between gap-2">
+                                        <span class="text-beLightMuted dark:text-gray-400">Pipeline:</span>
+                                        <span class="font-mono font-bold text-beLightInk dark:text-white">Ae • Pr • Ps • Ai</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form id="be-contact-form" class="lg:col-span-7 space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Your Name *</label>
+                                        <input type="text" required placeholder="e.g., Ananya Sen"
+                                            class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Email Address *</label>
+                                        <input type="email" required placeholder="ananya@brand.in"
+                                            class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Project Type</label>
+                                    <select class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                                        <option>Commercial &amp; Short-Form Video Editing (Pr + Ae)</option>
+                                        <option>Motion Graphics Ad / Explainer (Ae + Ai)</option>
+                                        <option>VFX &amp; Matte Compositing (Ae + Ps)</option>
+                                        <option>Brand Visual Identity &amp; Key Art (Ai + Ps)</option>
+                                        <option>Full-Time / Retainer Studio Role</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Project Brief &amp; Timeline *</label>
+                                    <textarea rows="4" required placeholder="Tell me about your video goals, target platform, runtime, and deadline..."
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue resize-none"></textarea>
+                                </div>
+
+                                <button type="submit" class="px-6 py-3 rounded-full bg-beBlue hover:bg-beBlueDark text-white font-bold text-sm shadow-sm transition-colors cursor-pointer">
+                                    Send Message to Pankaj
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- =====================================================================
+         4. FULL-SCREEN BEHANCE PROJECT CASE STUDY LIGHTBOX MODAL
+    ====================================================================== -->
+    <div id="be-lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md overflow-y-auto">
+        <div class="min-h-screen py-4 sm:py-8 px-3 sm:px-6 flex justify-center">
+            <div class="w-full max-w-[1280px] flex flex-col lg:flex-row gap-5 items-start my-auto">
+
+                <!-- Main Vertical Behance Presentation Sheet -->
+                <div class="flex-1 w-full bg-white dark:bg-beDarkCard rounded-2xl shadow-2xl border border-gray-200 dark:border-white/10 overflow-hidden">
+
+                    <!-- Presentation Header with Creator Info -->
+                    <div class="px-5 sm:px-8 py-4 border-b border-gray-200 dark:border-white/10 flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-10 h-10 rounded-full bg-[#0F131F] text-white font-black text-sm flex items-center justify-center shrink-0 border border-beBlue">
+                                PD
+                            </div>
+                            <div class="min-w-0">
+                                <h2 id="lb-title" class="font-extrabold text-base sm:text-xl text-beLightInk dark:text-white truncate">
+                                    Project Title
+                                </h2>
+                                <div class="flex items-center gap-2 text-xs text-beLightMuted dark:text-gray-400">
+                                    <span class="font-bold text-beLightInk dark:text-gray-200">Pankaj Das (পঙ্কজ দাস)</span>
+                                    <span>•</span>
+                                    <span id="lb-category">Motion Graphics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="closeCaseStudyModal()" aria-label="Close Case Study" class="lg:hidden p-2 rounded-full bg-gray-100 dark:bg-white/10 text-beLightInk dark:text-white cursor-pointer">
+                            <i data-lucide="x" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+
+                    <!-- Presentation Vertical Content Blocks -->
+                    <div class="p-5 sm:p-8 space-y-8">
+
+                        <!-- Interactive 60fps HTML5 Canvas Live Motion-Graphics Preview Player -->
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                                <span class="flex items-center gap-2 font-bold text-beBlue">
+                                    <span class="w-2 h-2 rounded-full bg-beBlue animate-ping"></span>
+                                    60FPS INTERACTIVE MOTION &amp; EDIT PREVIEW
+                                </span>
+                                <span id="lb-player-timecode" class="text-beLightMuted dark:text-gray-400">00:00:00:00 / 00:00:12:00</span>
+                            </div>
+
+                            <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-[#070910] border border-gray-200 dark:border-white/15 shadow-lg">
+                                <canvas id="lb-preview-canvas" class="w-full h-full block"></canvas>
+
+                                <!-- Player Scrubbing & Layer Controls -->
+                                <div class="absolute bottom-3 left-3 right-3 px-4 py-2.5 rounded-xl bg-black/80 backdrop-blur-md border border-white/15 space-y-2 text-white">
+                                    <!-- Scrubbing Timeline -->
+                                    <div id="lb-scrub-track" class="w-full h-1.5 rounded-full bg-white/20 cursor-pointer relative overflow-hidden">
+                                        <div id="lb-scrub-fill" class="h-full bg-beBlue w-0"></div>
+                                    </div>
+
+                                    <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                                        <div class="flex items-center gap-3">
+                                            <button type="button" onclick="toggleCanvasPlayback()" class="flex items-center gap-1.5 font-mono font-bold text-sky-400 hover:text-white cursor-pointer">
+                                                <i id="lb-play-icon" data-lucide="pause" class="w-4 h-4"></i>
+                                                <span id="lb-play-text">PAUSE</span>
+                                            </button>
+
+                                            <button type="button" onclick="toggleCanvasLayerMode()" class="px-2.5 py-0.5 rounded bg-white/10 hover:bg-white/20 font-mono text-[11px] text-amber-300 cursor-pointer">
+                                                Layer: <span id="lb-layer-mode-label">Final Composite</span>
+                                            </button>
+                                        </div>
+
+                                        <a id="lb-external-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden font-mono text-[11px] text-emerald-400 hover:underline items-center gap-1">
+                                            <span>Open Reel Link</span>
+                                            <i data-lucide="external-link" class="w-3 h-3"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Overview & Challenge -->
+                        <div class="space-y-3">
+                            <h3 class="font-extrabold text-lg text-beLightInk dark:text-white">01. Project Overview &amp; Creative Challenge</h3>
+                            <p id="lb-overview" class="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed"></p>
+                            <div id="lb-cover-showcase" class="w-full aspect-[16/10] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm"></div>
+                        </div>
+
+                        <!-- Multi-Track Adobe Workflow Breakdown -->
+                        <div class="space-y-3">
+                            <h3 class="font-extrabold text-lg text-beLightInk dark:text-white">02. Multi-Track Adobe Workflow Breakdown</h3>
+                            <div id="lb-workflow-tracks" class="space-y-2.5">
+                                <!-- Populated via JS -->
+                            </div>
+                        </div>
+
+                        <!-- Color Palette Swatches & Deliverables -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-3">
+                                <h3 class="font-extrabold text-base text-beLightInk dark:text-white">03. Color System</h3>
+                                <div id="lb-color-swatches" class="grid grid-cols-3 gap-2.5">
+                                    <!-- Populated via JS -->
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <h3 class="font-extrabold text-base text-beLightInk dark:text-white">04. Deliverables</h3>
+                                <ul id="lb-deliverables-list" class="space-y-1.5 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+                                    <!-- Populated via JS -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Large Bottom "Appreciate This Project" Banner -->
+                        <div class="py-8 px-4 rounded-2xl bg-gray-50 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 text-center space-y-3">
+                            <button id="lb-bottom-like-btn" type="button" class="w-16 h-16 rounded-full bg-beBlue hover:bg-beBlueDark text-white mx-auto flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer">
+                                <i data-lucide="thumbs-up" class="w-7 h-7"></i>
+                            </button>
+                            <div class="font-extrabold text-base text-beLightInk dark:text-white">Appreciate This Project</div>
+                            <div id="lb-bottom-counters" class="text-xs text-beLightMuted dark:text-gray-400">0 Appreciations • 0 Views</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Floating Right-Hand Behance Action Rail -->
+                <aside class="w-full lg:w-[290px] shrink-0 lg:sticky lg:top-6 space-y-4">
+                    <div class="bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/10 p-5 shadow-xl space-y-5">
+
+                        <!-- Close + Appreciate Top Actions -->
+                        <div class="flex items-center justify-between gap-2">
+                            <button id="lb-rail-like-btn" type="button" class="flex-1 py-2.5 px-4 rounded-full bg-beBlue hover:bg-beBlueDark text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition-colors cursor-pointer">
+                                <i data-lucide="thumbs-up" class="w-4 h-4"></i>
+                                <span>Appreciate</span>
+                                <span id="lb-rail-like-count" class="px-1.5 py-0.5 rounded-full bg-white/20 text-[10px]">0</span>
+                            </button>
+
+                            <button type="button" onclick="closeCaseStudyModal()" title="Close Lightbox (Esc)" class="p-2.5 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-beLightInk dark:text-white cursor-pointer">
+                                <i data-lucide="x" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+
+                        <!-- Tools Used Badges (Strictly Ae, Pr, Ps, Ai) -->
+                        <div class="pt-4 border-t border-gray-100 dark:border-white/10">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400 mb-2.5">Tools Used</h4>
+                            <div id="lb-rail-tools" class="space-y-2">
+                                <!-- Populated via JS -->
+                            </div>
+                        </div>
+
+                        <!-- Project Info -->
+                        <div class="pt-4 border-t border-gray-100 dark:border-white/10 space-y-2.5 text-xs">
+                            <div>
+                                <span class="text-beLightMuted dark:text-gray-400 block">Client / Campaign</span>
+                                <span id="lb-rail-client" class="font-bold text-beLightInk dark:text-white">Client</span>
+                            </div>
+                            <div>
+                                <span class="text-beLightMuted dark:text-gray-400 block">Year</span>
+                                <span id="lb-rail-year" class="font-bold text-beLightInk dark:text-white">2026</span>
+                            </div>
+                            <div>
+                                <span class="text-beLightMuted dark:text-gray-400 block">Impact</span>
+                                <span id="lb-rail-impact" class="font-bold text-emerald-600 dark:text-emerald-400">High Retention</span>
+                            </div>
+                        </div>
+
+                        <!-- Share / Copy Link & Edit Project Button -->
+                        <div class="pt-4 border-t border-gray-100 dark:border-white/10 space-y-2">
+                            <button type="button" onclick="copyProjectShareLink()" class="w-full py-2 px-3 rounded-xl border border-gray-200 dark:border-white/15 hover:bg-gray-50 dark:hover:bg-white/5 text-xs font-bold text-beLightInk dark:text-white flex items-center justify-center gap-1.5 cursor-pointer">
+                                <i data-lucide="share-2" class="w-3.5 h-3.5 text-beBlue"></i>
+                                <span>Share / Copy Link</span>
+                            </button>
+
+                            <button id="lb-rail-edit-btn" type="button" class="w-full py-2 px-3 rounded-xl bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/15 text-xs font-bold text-beLightInk dark:text-white flex items-center justify-center gap-1.5 cursor-pointer">
+                                <i data-lucide="pencil" class="w-3.5 h-3.5 text-beBlue"></i>
+                                <span>Edit Project</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         5. BUILT-IN LIVE PORTFOLIO EDITOR ("+ ADD / MANAGE WORK" MODAL)
+    ====================================================================== -->
+    <div id="work-manager-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm overflow-y-auto">
+        <div class="w-full max-w-3xl bg-white dark:bg-beDarkCard rounded-2xl border border-gray-200 dark:border-white/15 shadow-2xl overflow-hidden my-auto">
+
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-gray-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
+                <div>
+                    <h3 id="wm-title-heading" class="font-extrabold text-lg text-beLightInk dark:text-white">Add / Manage Portfolio Work</h3>
+                    <p class="text-xs text-beLightMuted dark:text-gray-400">Saved automatically in your browser (localStorage) + JSON backup export/import.</p>
+                </div>
+                <button type="button" onclick="closeWorkManagerModal()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500 cursor-pointer">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="p-6 max-h-[82vh] overflow-y-auto space-y-6">
+
+                <!-- Add / Edit Form -->
+                <form id="wm-project-form" class="space-y-4">
+                    <input type="hidden" id="wm-edit-id" value="">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Project Title *</label>
+                            <input id="wm-input-title" type="text" required placeholder="e.g., Gen-Z Streetwear Launch Reel"
+                                class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Category *</label>
+                            <select id="wm-input-category" class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                                <option value="Motion Graphics">Motion Graphics</option>
+                                <option value="Video Editing">Video Editing</option>
+                                <option value="VFX & Compositing">VFX &amp; Compositing</option>
+                                <option value="Brand & Key Art">Brand &amp; Key Art</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Client / Brand *</label>
+                            <input id="wm-input-client" type="text" required placeholder="e.g., Urban Thread Kolkata"
+                                class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Year *</label>
+                            <input id="wm-input-year" type="text" value="2026" required
+                                class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Cover Art Theme</label>
+                            <select id="wm-input-theme" class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                                <option value="apparel">Apparel Campaign</option>
+                                <option value="kinetic">Kinetic Typography Film</option>
+                                <option value="commercial">Commercial Product Ad</option>
+                                <option value="vfx">VFX Sky &amp; Matte Composite</option>
+                                <option value="documentary">Documentary Video Edit</option>
+                                <option value="identity">Brand Identity &amp; Key Art</option>
+                                <option value="reels">Fast-Paced Campaign Cut</option>
+                                <option value="event">Event Title Sequence</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Software Checkboxes (Strictly Ae, Pr, Ps, Ai) -->
+                    <div>
+                        <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-2">Adobe Tools Used (Select from Ae, Pr, Ps, Ai) *</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 cursor-pointer text-xs font-semibold">
+                                <input type="checkbox" name="wm-tools" value="Ae" checked class="accent-beBlue">
+                                <span class="w-5 h-5 rounded cc-ae text-[10px] font-extrabold flex items-center justify-center">Ae</span>
+                                <span>After Effects</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 cursor-pointer text-xs font-semibold">
+                                <input type="checkbox" name="wm-tools" value="Pr" checked class="accent-beBlue">
+                                <span class="w-5 h-5 rounded cc-pr text-[10px] font-extrabold flex items-center justify-center">Pr</span>
+                                <span>Premiere Pro</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 cursor-pointer text-xs font-semibold">
+                                <input type="checkbox" name="wm-tools" value="Ps" class="accent-beBlue">
+                                <span class="w-5 h-5 rounded cc-ps text-[10px] font-extrabold flex items-center justify-center">Ps</span>
+                                <span>Photoshop</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 cursor-pointer text-xs font-semibold">
+                                <input type="checkbox" name="wm-tools" value="Ai" class="accent-beBlue">
+                                <span class="w-5 h-5 rounded cc-ai text-[10px] font-extrabold flex items-center justify-center">Ai</span>
+                                <span>Illustrator</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Video / Reel Link (Optional)</label>
+                            <input id="wm-input-url" type="url" placeholder="https://vimeo.com/..."
+                                class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Deliverables (Comma separated)</label>
+                            <input id="wm-input-deliverables" type="text" placeholder="16:9 Master Film, 9:16 Cutdown, Key Art"
+                                class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-beLightInk dark:text-gray-200 mb-1.5">Description &amp; Challenge *</label>
+                        <textarea id="wm-input-description" rows="3" required placeholder="Describe the visual concept, animation keyframes, editing style, and results..."
+                            class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 dark:bg-beDarkBg border border-gray-200 dark:border-white/15 text-sm text-beLightInk dark:text-white focus:outline-none focus:border-beBlue resize-none"></textarea>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                        <button type="button" onclick="resetFormToNew()" class="text-xs font-semibold text-beLightMuted hover:text-beBlue cursor-pointer">
+                            + Clear Form for New Entry
+                        </button>
+                        <button type="submit" class="px-5 py-2.5 rounded-full bg-beBlue hover:bg-beBlueDark text-white text-xs font-bold shadow-sm cursor-pointer">
+                            Save Project
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Existing Projects Quick-Manage List + JSON Backup / Import -->
+                <div class="pt-5 border-t border-gray-200 dark:border-white/10 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-beLightMuted dark:text-gray-400">Your Saved Projects</h4>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <button type="button" onclick="exportPortfolioJson()" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/15 text-xs font-bold text-beLightInk dark:text-white cursor-pointer">
+                                Export JSON Backup
+                            </button>
+                            <label class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/15 text-xs font-bold text-beLightInk dark:text-white cursor-pointer">
+                                Import JSON
+                                <input type="file" accept=".json" onchange="importPortfolioJson(event)" class="hidden">
+                            </label>
+                            <button type="button" onclick="restoreDefaultProjects()" class="px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-500/10 text-xs font-bold text-red-600 dark:text-red-400 cursor-pointer">
+                                Reset Defaults
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="wm-existing-list" class="space-y-2 max-h-56 overflow-y-auto pr-1">
+                        <!-- Populated via JS -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         6. JAVASCRIPT APPLICATION ENGINE
+    ====================================================================== -->
+    <script>
+        lucide.createIcons();
+
+        const STORAGE_KEY = 'pankaj_das_behance_portfolio_v2';
+
+        const CC_META = {
+            Ae: { name: 'After Effects', cls: 'cc-ae' },
+            Pr: { name: 'Premiere Pro', cls: 'cc-pr' },
+            Ps: { name: 'Photoshop', cls: 'cc-ps' },
+            Ai: { name: 'Illustrator', cls: 'cc-ai' }
+        };
+
+        // Bespoke SVG Cover Art Generator tailored to Pankaj's 8 project themes
+        function renderBespokeCoverSvg(theme, title, subtitle, colors) {
+            const c1 = colors[0] || '#0057FF';
+            const c2 = colors[1] || '#31A8FF';
+            const c3 = colors[2] || '#FF9A00';
+            const tMain = (title || 'PROJECT').toUpperCase().slice(0, 26);
+            const tSub = (subtitle || 'ADOBE CC').toUpperCase().slice(0, 32);
+
+            switch (theme) {
+                case 'apparel':
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="500" fill="#101218"/>
+                        <rect x="45" y="45" width="330" height="410" rx="22" fill="${c1}"/>
+                        <text x="72" y="130" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="44">GEN-Z</text>
+                        <text x="72" y="178" fill="${c3}" font-family="Inter, sans-serif" font-weight="900" font-size="44">DROP 26</text>
+                        <rect x="72" y="215" width="160" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.85"/>
+                        <rect x="72" y="238" width="110" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.45"/>
+                        <rect x="72" y="375" width="195" height="42" rx="21" fill="#0F1115"/>
+                        <text x="170" y="401" text-anchor="middle" fill="#FFFFFF" font-family="JetBrains Mono, monospace" font-weight="700" font-size="13">9:16 CAMPAIGN CUT</text>
+                        <rect x="405" y="45" width="350" height="195" rx="20" fill="#181C26" stroke="${c2}" stroke-width="2"/>
+                        <text x="432" y="122" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="800" font-size="22">${tMain}</text>
+                        <text x="432" y="152" fill="${c2}" font-family="JetBrains Mono, monospace" font-size="13">${tSub}</text>
+                        <rect x="405" y="260" width="350" height="195" rx="20" fill="${c3}"/>
+                        <text x="432" y="348" fill="#111111" font-family="Inter, sans-serif" font-weight="900" font-size="30">Pr + Ae + Ps</text>
+                        <text x="432" y="378" fill="#111111" font-family="JetBrains Mono, monospace" font-weight="700" font-size="13">SPEED RAMPS &amp; HALFTONE ART</text>
+                    </svg>`;
+
+                case 'commercial':
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="commGrad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#0B0F19"/>
+                                <stop offset="100%" stop-color="${c1}"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="800" height="500" fill="url(#commGrad)"/>
+                        <circle cx="590" cy="250" r="155" fill="${c3}" fill-opacity="0.22"/>
+                        <circle cx="590" cy="250" r="105" fill="none" stroke="${c3}" stroke-width="3"/>
+                        <rect x="545" y="155" width="90" height="190" rx="24" fill="#111827" stroke="#FFFFFF" stroke-width="2.5"/>
+                        <text x="590" y="256" text-anchor="middle" fill="${c3}" font-family="Inter, sans-serif" font-weight="900" font-size="18">AD</text>
+                        <text x="65" y="190" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="34">${tMain}</text>
+                        <text x="65" y="228" fill="${c2}" font-family="JetBrains Mono, monospace" font-weight="700" font-size="14">${tSub}</text>
+                        <rect x="65" y="268" width="220" height="44" rx="22" fill="${c3}"/>
+                        <text x="175" y="295" text-anchor="middle" fill="#0B0F19" font-family="Inter, sans-serif" font-weight="900" font-size="13">4K COMMERCIAL CUT</text>
+                    </svg>`;
+
+                case 'vfx':
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="vfxRad" cx="50%" cy="45%" r="60%">
+                                <stop offset="0%" stop-color="${c2}"/>
+                                <stop offset="55%" stop-color="#111827"/>
+                                <stop offset="100%" stop-color="#06080F"/>
+                            </radialGradient>
+                        </defs>
+                        <rect width="800" height="500" fill="url(#vfxRad)"/>
+                        <circle cx="400" cy="240" r="150" fill="none" stroke="${c2}" stroke-width="2" stroke-dasharray="12 8"/>
+                        <circle cx="400" cy="240" r="105" fill="none" stroke="${c3}" stroke-width="2.5"/>
+                        <line x1="400" y1="35" x2="400" y2="445" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+                        <line x1="110" y1="240" x2="690" y2="240" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+                        <rect x="175" y="198" width="450" height="84" rx="16" fill="#070B14" fill-opacity="0.9" stroke="${c2}" stroke-width="2"/>
+                        <text x="400" y="240" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="25">${tMain}</text>
+                        <text x="400" y="264" text-anchor="middle" fill="${c3}" font-family="JetBrains Mono, monospace" font-weight="700" font-size="12">${tSub}</text>
+                    </svg>`;
+
+                case 'documentary':
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="500" fill="#0D1017"/>
+                        <rect x="60" y="60" width="680" height="230" rx="18" fill="#171C28" stroke="rgba(255,255,255,0.14)"/>
+                        <text x="90" y="145" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="32">${tMain}</text>
+                        <text x="90" y="182" fill="${c3}" font-family="JetBrains Mono, monospace" font-weight="700" font-size="14">${tSub}</text>
+                        <rect x="90" y="212" width="160" height="36" rx="18" fill="${c1}"/>
+                        <text x="170" y="235" text-anchor="middle" fill="#FFFFFF" font-family="JetBrains Mono, monospace" font-weight="700" font-size="12">STORYTELLING</text>
+                        <rect x="60" y="315" width="680" height="36" rx="8" fill="#171C28"/>
+                        <rect x="75" y="324" width="210" height="18" rx="4" fill="${c1}"/>
+                        <rect x="295" y="324" width="160" height="18" rx="4" fill="${c3}"/>
+                        <rect x="465" y="324" width="255" height="18" rx="4" fill="${c2}"/>
+                        <rect x="60" y="365" width="680" height="36" rx="8" fill="#171C28"/>
+                        <rect x="75" y="374" width="380" height="18" rx="4" fill="#9999FF"/>
+                        <rect x="465" y="374" width="215" height="18" rx="4" fill="${c1}"/>
+                    </svg>`;
+
+                case 'identity':
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="500" fill="#0B1120"/>
+                        <polygon points="400,75 585,180 400,285 215,180" fill="${c1}" fill-opacity="0.9" stroke="#FFFFFF" stroke-width="2"/>
+                        <polygon points="215,180 400,285 400,420 215,315" fill="${c2}" fill-opacity="0.78" stroke="#FFFFFF" stroke-width="2"/>
+                        <polygon points="585,180 400,285 400,420 585,315" fill="${c3}" fill-opacity="0.88" stroke="#FFFFFF" stroke-width="2"/>
+                        <rect x="55" y="42" width="340" height="74" rx="14" fill="#0F172A" fill-opacity="0.92" stroke="${c2}" stroke-width="1.5"/>
+                        <text x="75" y="77" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="800" font-size="19">${tMain}</text>
+                        <text x="75" y="100" fill="${c3}" font-family="JetBrains Mono, monospace" font-size="12">${tSub}</text>
+                    </svg>`;
+
+                case 'reels':
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="500" fill="#0A0E1A"/>
+                        <rect x="85" y="55" width="195" height="390" rx="26" fill="#121829" stroke="${c2}" stroke-width="3"/>
+                        <rect x="105" y="88" width="155" height="245" rx="14" fill="${c1}" fill-opacity="0.4"/>
+                        <polygon points="170,185 170,235 210,210" fill="#FFFFFF"/>
+                        <rect x="105" y="352" width="120" height="14" rx="7" fill="${c3}"/>
+                        <rect x="105" y="378" width="90" height="10" rx="5" fill="#94A3B8"/>
+                        <text x="325" y="185" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="34">${tMain}</text>
+                        <text x="325" y="222" fill="${c2}" font-family="JetBrains Mono, monospace" font-weight="700" font-size="15">${tSub}</text>
+                        <rect x="325" y="265" width="390" height="44" rx="10" fill="#121829" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="340" y="279" width="175" height="16" rx="5" fill="${c3}"/>
+                        <rect x="528" y="279" width="170" height="16" rx="5" fill="${c2}"/>
+                    </svg>`;
+
+                case 'event':
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="500" fill="#06080F"/>
+                        <line x1="0" y1="115" x2="800" y2="115" stroke="${c1}" stroke-width="2"/>
+                        <line x1="0" y1="385" x2="800" y2="385" stroke="${c3}" stroke-width="2"/>
+                        <text x="400" y="232" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="38" letter-spacing="2">${tMain}</text>
+                        <text x="400" y="272" text-anchor="middle" fill="${c2}" font-family="JetBrains Mono, monospace" font-weight="700" font-size="15">${tSub}</text>
+                        <rect x="315" y="305" width="170" height="32" rx="16" fill="${c3}"/>
+                        <text x="400" y="326" text-anchor="middle" fill="#06080F" font-family="JetBrains Mono, monospace" font-weight="800" font-size="12">TITLE OPENER</text>
+                    </svg>`;
+
+                default: // 'kinetic'
+                    return `<svg viewBox="0 0 800 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="kinGrad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#070B19"/>
+                                <stop offset="65%" stop-color="${c1}"/>
+                                <stop offset="100%" stop-color="#09132B"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="800" height="500" fill="url(#kinGrad)"/>
+                        <circle cx="645" cy="115" r="155" fill="${c2}" fill-opacity="0.2"/>
+                        <rect x="65" y="90" width="670" height="320" rx="22" fill="#090D1A" fill-opacity="0.76" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                        <rect x="100" y="130" width="155" height="28" rx="14" fill="${c3}"/>
+                        <text x="178" y="149" text-anchor="middle" fill="#090D1A" font-family="JetBrains Mono, monospace" font-weight="800" font-size="12">60 FPS MOTION</text>
+                        <text x="100" y="226" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="900" font-size="36">${tMain}</text>
+                        <text x="100" y="268" fill="${c2}" font-family="JetBrains Mono, monospace" font-weight="700" font-size="15">${tSub}</text>
+                        <rect x="100" y="315" width="240" height="12" rx="6" fill="${c1}"/>
+                        <rect x="355" y="315" width="140" height="12" rx="6" fill="${c3}"/>
+                        <rect x="510" y="315" width="185" height="12" rx="6" fill="${c2}"/>
+                    </svg>`;
+            }
+        }
+
+        // Default 8 Portfolio Projects tailored to Pankaj Das's actual specialization
+        const INITIAL_PROJECTS = [
+            {
+                id: 'pd-proj-1',
+                featuredOrder: 1,
+                title: 'Apparel Launch Campaign Cut',
+                category: 'Video Editing',
+                client: 'Calcutta Streetwear Co.',
+                year: '2026',
+                tools: ['Pr', 'Ae', 'Ps'],
+                likes: 648,
+                liked: false,
+                views: 9420,
+                impact: 'Sold Out Drop in 36 Hours • 79% Retention',
+                theme: 'apparel',
+                colors: ['#0057FF', '#31A8FF', '#FF9A00'],
+                videoUrl: '',
+                tags: ['Apparel Campaign', 'Video Editing', 'Speed Ramps', 'Halftone'],
+                deliverables: ['16:9 Campaign Master Cut', '9:16 Vertical Cutdown (60fps)', 'Photoshop Halftone Key Art'],
+                description: 'Directed post-production for a high-energy streetwear drop in Kolkata. Combined beat-locked Premiere Pro speed ramps, layered Photoshop halftone cutouts, and snappy After Effects kinetic typography overlays.',
+                workflow: [
+                    { tool: 'Pr', text: 'Assembled rhythmic rough cut with optical-flow speed ramps and custom bass-drop SFX.' },
+                    { tool: 'Ps', text: 'Isolated model frames and crafted gritty halftone & paper-rip texture overlays.' },
+                    { tool: 'Ae', text: 'Animated kinetic price tags, drop countdown timers, and camera impact shakes.' }
+                ]
+            },
+            {
+                id: 'pd-proj-2',
+                featuredOrder: 2,
+                title: 'Kinetic Typography Brand Film',
+                category: 'Motion Graphics',
+                client: 'Veloce Mobility India',
+                year: '2026',
+                tools: ['Ae', 'Ai', 'Pr'],
+                likes: 582,
+                liked: false,
+                views: 8150,
+                impact: '4.2x Campaign ROAS • 640K Organic Views',
+                theme: 'kinetic',
+                colors: ['#0057FF', '#38BDF8', '#FF9A00'],
+                videoUrl: '',
+                tags: ['Kinetic Typography', 'Brand Film', 'Vector Motion', '60fps'],
+                deliverables: ['60s 16:9 Master Launch Film', '15s Bumper Cutdowns', 'Vector Typography Styleframes'],
+                description: 'A bold kinetic typography commercial built from custom geometric vector frames in Illustrator and graph-editor bezier motion curves in After Effects, finished with master sound design in Premiere Pro.',
+                workflow: [
+                    { tool: 'Ai', text: 'Constructed crisp vector typography lockups, custom icons, and modular grid frames.' },
+                    { tool: 'Ae', text: 'Keyframed high-velocity text reveals, match-cuts, and directional motion blur at 60fps.' },
+                    { tool: 'Pr', text: 'Conformed final commercial sequence, mixed voiceover & risers, and exported 4K masters.' }
+                ]
+            },
+            {
+                id: 'pd-proj-3',
+                featuredOrder: 3,
+                title: 'Commercial Product Ad',
+                category: 'Motion Graphics',
+                client: 'Aura Brew Cold Coffee',
+                year: '2026',
+                tools: ['Pr', 'Ae', 'Ps'],
+                likes: 495,
+                liked: false,
+                views: 6890,
+                impact: '3.5x Return on Ad Spend',
+                theme: 'commercial',
+                colors: ['#0057FF', '#31A8FF', '#FF9A00'],
+                videoUrl: '',
+                tags: ['Product Ad', 'Commercial Edit', 'Color Grade', 'Callouts'],
+                deliverables: ['30s Commercial Master (16:9)', '15s & 9:16 Ad Cutdowns', 'Retouched Product Key Art'],
+                description: 'High-impact beverage commercial combining macro product shots, rhythmic percussion editing in Premiere Pro, clean bottle retouching in Photoshop, and animated flavor callouts in After Effects.',
+                workflow: [
+                    { tool: 'Ps', text: 'Cleaned studio rig reflections and enhanced condensation highlights on product plates.' },
+                    { tool: 'Pr', text: 'Edited macro pour sequences on beat and balanced warm-cool contrast in Lumetri.' },
+                    { tool: 'Ae', text: 'Added tracked ingredient callout badges and a dynamic end-card offer slate.' }
+                ]
+            },
+            {
+                id: 'pd-proj-4',
+                featuredOrder: 4,
+                title: 'VFX Sky & Matte Composite',
+                category: 'VFX & Compositing',
+                client: 'NeonPulse Music Visuals',
+                year: '2025',
+                tools: ['Ae', 'Ps', 'Pr'],
+                likes: 538,
+                liked: false,
+                views: 7430,
+                impact: 'Featured Visual Showcase • 4K VFX',
+                theme: 'vfx',
+                colors: ['#0057FF', '#38BDF8', '#9999FF'],
+                videoUrl: '',
+                tags: ['VFX Compositing', 'Sky Replacement', 'Matte Painting', 'Tracking'],
+                deliverables: ['4K VFX Composited Sequences', 'Before/After Breakdown Edit', 'Layered Photoshop Matte Plates'],
+                description: 'Transformed overcast rooftop footage into a dramatic neon dusk skyline using multi-layer matte extensions in Photoshop, 3D planar camera tracking, rotoscoping, and atmospheric glow compositing in After Effects.',
+                workflow: [
+                    { tool: 'Ps', text: 'Painted high-resolution dusk sky replacements and removed rooftop antenna clutter.' },
+                    { tool: 'Ae', text: 'Tracked camera motion, rotoscoped foreground subject, and matched grain & light wrap.' },
+                    { tool: 'Pr', text: 'Integrated final VFX shots into the music video timeline and delivered ProRes masters.' }
+                ]
+            },
+            {
+                id: 'pd-proj-5',
+                featuredOrder: 5,
+                title: 'Documentary Video Edit',
+                category: 'Video Editing',
+                client: 'Bengal Heritage & Tech Stories',
+                year: '2025',
+                tools: ['Pr', 'Ae', 'Ps'],
+                likes: 442,
+                liked: false,
+                views: 6120,
+                impact: '71% Average View Duration on 18-Min Film',
+                theme: 'documentary',
+                colors: ['#0057FF', '#31A8FF', '#FF9A00'],
+                videoUrl: '',
+                tags: ['Documentary Edit', '2.5D Parallax', 'Map Animation', 'Storytelling'],
+                deliverables: ['18-Minute 4K Documentary Master', 'Animated Map & Timeline Inserts', 'Key Art Thumbnail'],
+                description: 'Narrative-driven documentary edit featuring multi-cam pacing in Premiere Pro, 2.5D archival photo parallax and animated route maps in After Effects, and custom Photoshop key art.',
+                workflow: [
+                    { tool: 'Pr', text: 'Structured narrative arc, A-roll/B-roll pacing, and clean dialogue audio leveling.' },
+                    { tool: 'Ps', text: 'Separated historical photos into foreground/background layers and designed key art.' },
+                    { tool: 'Ae', text: 'Built 2.5D camera parallax animations, newspaper highlights, and animated map pins.' }
+                ]
+            },
+            {
+                id: 'pd-proj-6',
+                featuredOrder: 6,
+                title: 'Minimalist Brand Identity & Motion System',
+                category: 'Brand & Key Art',
+                client: 'CloudGrid Logistics',
+                year: '2026',
+                tools: ['Ai', 'Ae', 'Ps'],
+                likes: 476,
+                liked: false,
+                views: 5840,
+                impact: 'Complete Visual & Motion Identity System',
+                theme: 'identity',
+                colors: ['#0057FF', '#38BDF8', '#FF9A00'],
+                videoUrl: '',
+                tags: ['Brand Identity', 'Isometric Vector', 'Logo Animation', 'Motion System'],
+                deliverables: ['Vector Logo & Brand Guidelines (Ai)', 'Animated Logo Sting & Loop (Ae)', 'Brand & Pitch Key Art (Ps)'],
+                description: 'Developed a cohesive geometric brand identity in Illustrator paired with a 2.5D isometric vector motion system in After Effects and presentation mockups in Photoshop.',
+                workflow: [
+                    { tool: 'Ai', text: 'Designed precision geometric logomark, typography rules, and isometric vector assets.' },
+                    { tool: 'Ae', text: 'Animated modular logo reveal and 2.5D isometric vector explainer loops.' },
+                    { tool: 'Ps', text: 'Created brand application mockups and campaign key visuals.' }
+                ]
+            },
+            {
+                id: 'pd-proj-7',
+                featuredOrder: 7,
+                title: 'Motion Infographics Campaign Edit',
+                category: 'Motion Graphics',
+                client: 'FinEdge Advisory Kolkata',
+                year: '2026',
+                tools: ['Pr', 'Ae', 'Ai'],
+                likes: 419,
+                liked: false,
+                views: 5390,
+                impact: '+215% Audience Reach & Engagement',
+                theme: 'reels',
+                colors: ['#0057FF', '#31A8FF', '#FF9A00'],
+                videoUrl: '',
+                tags: ['Motion Infographics', 'Hook Editing', 'Vector Charts', 'Retention'],
+                deliverables: ['10 Short-Form Campaign Cuts', 'Custom Vector Chart Library (Ai)', 'Reusable Lower-Third Templates'],
+                description: 'Created a 10-part motion graphics campaign engineered around sharp opening hooks, custom vector infographic charts in Illustrator, and crisp motion pop-ups in After Effects.',
+                workflow: [
+                    { tool: 'Pr', text: 'Tightened talking-head pacing and layered dynamic zoom cuts and sound risers.' },
+                    { tool: 'Ai', text: 'Illustrated clean financial icons, progress bars, and comparison cards.' },
+                    { tool: 'Ae', text: 'Animated data charts, highlighted captions, and branded outro bumpers.' }
+                ]
+            },
+            {
+                id: 'pd-proj-8',
+                featuredOrder: 8,
+                title: 'Event Title Sequence',
+                category: 'Brand & Key Art',
+                client: 'Kolkata Creative & Design Summit',
+                year: '2025',
+                tools: ['Ae', 'Ai', 'Ps'],
+                likes: 325,
+                liked: false,
+                views: 4210,
+                impact: 'Main Stage LED Wall Opener (4K)',
+                theme: 'event',
+                colors: ['#0057FF', '#38BDF8', '#FF9A00'],
+                videoUrl: '',
+                tags: ['Title Sequence', 'Event Opener', 'Stage Visuals', 'Typography'],
+                deliverables: ['45s Main Stage Title Opener', 'Speaker Lower-Thirds & Loop Backgrounds', 'Event Key Art Poster'],
+                description: 'Designed and animated the main-stage opening title sequence for a creative summit in Kolkata—blending bold kinetic typography, vector stage geometry, and atmospheric light sweeps.',
+                workflow: [
+                    { tool: 'Ai', text: 'Built geometric stage framing, speaker badge vectors, and typographic grids.' },
+                    { tool: 'Ps', text: 'Textured gradient backdrops and crafted main-stage promotional posters.' },
+                    { tool: 'Ae', text: 'Orchestrated 45-second kinetic title animation synced to orchestral percussion.' }
+                ]
+            }
+        ];
+
+        let projects = [];
+        let activeCategory = 'All Work';
+        let activeTool = 'All Tools';
+        let activeSort = 'featured';
+        let activeSearch = '';
+        let activeLightboxId = null;
+
+        // Toast Helper
+        let toastTimer = null;
+        function showToast(msg) {
+            const el = document.getElementById('be-toast');
+            document.getElementById('be-toast-text').textContent = msg;
+            el.classList.remove('hidden');
+            el.classList.add('flex');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                el.classList.add('hidden');
+                el.classList.remove('flex');
+            }, 2600);
+        }
+
+        // Storage Management
+        function loadProjectsFromStorage() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        projects = parsed;
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.warn('Storage read fallback:', e);
+            }
+            projects = JSON.parse(JSON.stringify(INITIAL_PROJECTS));
+            saveProjectsToStorage();
+        }
+
+        function saveProjectsToStorage() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
+            } catch (e) {
+                console.warn('Storage write fallback:', e);
+            }
+        }
+
+        function refreshMetrics() {
+            const totalLikes = projects.reduce((acc, p) => acc + (Number(p.likes) || 0), 0);
+            document.getElementById('metric-live-appreciations').textContent = totalLikes.toLocaleString();
+        }
+
+        // Render Behance 3-Column Project Grid
+        function renderProjectGrid() {
+            const grid = document.getElementById('be-projects-grid');
+            const empty = document.getElementById('be-empty-state');
+
+            let list = projects.filter(p => {
+                const catOk = activeCategory === 'All Work' || p.category === activeCategory;
+                const toolOk = activeTool === 'All Tools' || (Array.isArray(p.tools) && p.tools.includes(activeTool));
+                const q = activeSearch.trim().toLowerCase();
+                const searchOk = !q ||
+                    p.title.toLowerCase().includes(q) ||
+                    p.client.toLowerCase().includes(q) ||
+                    p.category.toLowerCase().includes(q) ||
+                    (Array.isArray(p.tags) && p.tags.some(t => t.toLowerCase().includes(q))) ||
+                    (Array.isArray(p.tools) && p.tools.some(t => t.toLowerCase().includes(q)));
+                return catOk && toolOk && searchOk;
+            });
+
+            if (activeSort === 'appreciated') {
+                list = [...list].sort((a, b) => (b.likes || 0) - (a.likes || 0));
+            } else if (activeSort === 'viewed') {
+                list = [...list].sort((a, b) => (b.views || 0) - (a.views || 0));
+            } else {
+                list = [...list].sort((a, b) => (a.featuredOrder || 99) - (b.featuredOrder || 99));
+            }
+
+            refreshMetrics();
+
+            if (list.length === 0) {
+                grid.innerHTML = '';
+                empty.classList.remove('hidden');
+                lucide.createIcons();
+                return;
+            }
+
+            empty.classList.add('hidden');
+            grid.innerHTML = list.map(p => {
+                const coverSvg = renderBespokeCoverSvg(p.theme, p.title, p.category, p.colors || ['#0057FF', '#31A8FF', '#FF9A00']);
+                const badges = (p.tools || []).map(code => {
+                    const meta = CC_META[code] || CC_META.Ae;
+                    return `<span title="Adobe ${meta.name}" class="w-6 h-6 rounded-md ${meta.cls} text-[10px] font-extrabold flex items-center justify-center shadow-sm">${code}</span>`;
+                }).join('');
+
+                return `
+                <article class="be-card-wrap group flex flex-col">
+                    <!-- 16:10 Behance Cover -->
+                    <div onclick="openCaseStudyModal('${p.id}')" class="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-gray-900 border border-gray-200 dark:border-white/10 shadow-sm cursor-pointer">
+                        <div class="be-cover-scale w-full h-full transition-transform duration-500">
+                            ${coverSvg}
+                        </div>
+
+                        <!-- Top-Right Official Adobe Badges -->
+                        <div class="absolute top-3 right-3 z-20 flex items-center gap-1">
+                            ${badges}
+                        </div>
+
+                        <!-- Behance Hover Overlay -->
+                        <div class="be-hover-layer absolute inset-0 z-10 p-4 flex flex-col justify-between">
+                            <div>
+                                <span class="px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-[11px] font-semibold">
+                                    ${p.category}
+                                </span>
+                            </div>
+
+                            <div class="flex items-end justify-between gap-2">
+                                <div class="min-w-0">
+                                    <h3 class="font-bold text-white text-base leading-snug truncate">${p.title}</h3>
+                                    <p class="text-xs text-gray-200 truncate">${p.client} • ${p.year}</p>
+                                </div>
+
+                                <button type="button" onclick="event.stopPropagation(); toggleAppreciate('${p.id}')" aria-label="Appreciate"
+                                    class="w-9 h-9 rounded-full ${p.liked ? 'bg-beBlue text-white' : 'bg-white/95 text-beLightInk hover:bg-beBlue hover:text-white'} flex items-center justify-center shadow-md shrink-0 transition-colors cursor-pointer">
+                                    <i data-lucide="thumbs-up" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Metadata Footer -->
+                    <div class="pt-2.5 px-0.5 flex items-center justify-between gap-2">
+                        <div class="min-w-0">
+                            <h3 onclick="openCaseStudyModal('${p.id}')" class="font-bold text-sm text-beLightInk dark:text-white hover:text-beBlue dark:hover:text-sky-400 truncate cursor-pointer transition-colors">
+                                ${p.title}
+                            </h3>
+                            <span class="text-xs text-beLightMuted dark:text-gray-400 block truncate">${p.client}</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 text-xs font-semibold text-beLightMuted dark:text-gray-400 shrink-0">
+                            <button type="button" onclick="toggleAppreciate('${p.id}')" class="flex items-center gap-1 ${p.liked ? 'text-beBlue font-bold' : 'hover:text-beBlue'} transition-colors cursor-pointer">
+                                <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i>
+                                <span>${p.likes}</span>
+                            </button>
+                            <span class="flex items-center gap-1">
+                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                                <span>${(p.views || 0).toLocaleString()}</span>
+                            </span>
+                        </div>
+                    </div>
+                </article>`;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        function toggleAppreciate(id) {
+            const p = projects.find(item => item.id === id);
+            if (!p) return;
+            p.liked = !p.liked;
+            p.likes += p.liked ? 1 : -1;
+            saveProjectsToStorage();
+            renderProjectGrid();
+            if (activeLightboxId === id) {
+                updateLightboxLikeControls(p);
+            }
+            if (p.liked) showToast(`Appreciated "${p.title}"`);
+        }
+
+        function updateLightboxLikeControls(p) {
+            document.getElementById('lb-rail-like-count').textContent = p.likes;
+            document.getElementById('lb-bottom-counters').textContent = `${p.likes.toLocaleString()} Appreciations • ${(p.views || 0).toLocaleString()} Views`;
+        }
+
+        // Category, Tool & Sort Listeners
+        document.querySelectorAll('.be-cat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                activeCategory = btn.getAttribute('data-category');
+                document.querySelectorAll('.be-cat-btn').forEach(b => {
+                    b.className = 'be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightMuted dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors cursor-pointer';
+                });
+                btn.className = 'be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-beLightInk text-white dark:bg-white dark:text-beLightInk transition-colors cursor-pointer';
+                renderProjectGrid();
+            });
+        });
+
+        function applyToolFilter(toolCode) {
+            switchViewTab('work');
+            activeTool = toolCode;
+            document.querySelectorAll('.be-tool-btn').forEach(b => {
+                const match = b.getAttribute('data-tool') === toolCode;
+                b.className = match
+                    ? 'be-tool-btn px-3 py-1 rounded-lg text-xs font-bold bg-beBlue text-white flex items-center gap-1.5 transition-colors cursor-pointer'
+                    : 'be-tool-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightInk dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-white/10 flex items-center gap-1.5 transition-colors cursor-pointer';
+            });
+            renderProjectGrid();
+        }
+
+        document.querySelectorAll('.be-tool-btn').forEach(btn => {
+            btn.addEventListener('click', () => applyToolFilter(btn.getAttribute('data-tool')));
+        });
+
+        document.getElementById('be-sort-select').addEventListener('change', (e) => {
+            activeSort = e.target.value;
+            renderProjectGrid();
+        });
+
+        function resetFilters() {
+            activeCategory = 'All Work';
+            activeTool = 'All Tools';
+            activeSearch = '';
+            document.getElementById('be-search-input').value = '';
+            document.getElementById('be-search-clear').classList.add('hidden');
+            document.querySelectorAll('.be-cat-btn').forEach(b => {
+                b.className = b.getAttribute('data-category') === 'All Work'
+                    ? 'be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-beLightInk text-white dark:bg-white dark:text-beLightInk transition-colors cursor-pointer'
+                    : 'be-cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-white/5 text-beLightMuted dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors cursor-pointer';
+            });
+            applyToolFilter('All Tools');
+        }
+
+        // Instant Search
+        const searchBox = document.getElementById('be-search-input');
+        const searchClear = document.getElementById('be-search-clear');
+        searchBox.addEventListener('input', (e) => {
+            activeSearch = e.target.value;
+            searchClear.classList.toggle('hidden', !activeSearch);
+            switchViewTab('work');
+            renderProjectGrid();
+        });
+
+        function clearSearchBox() {
+            searchBox.value = '';
+            activeSearch = '';
+            searchClear.classList.add('hidden');
+            renderProjectGrid();
+        }
+
+        // View Tab Switching
+        function switchViewTab(viewName) {
+            ['work', 'about', 'services', 'contact'].forEach(key => {
+                const sec = document.getElementById(`tab-${key}`);
+                if (sec) sec.classList.toggle('hidden', key !== viewName);
+            });
+
+            document.querySelectorAll('.top-nav-tab').forEach(btn => {
+                const isActive = btn.getAttribute('data-view') === viewName;
+                btn.className = isActive
+                    ? 'top-nav-tab px-3.5 py-2 rounded-full bg-beLightInk text-white dark:bg-white dark:text-beLightInk transition-colors cursor-pointer shrink-0'
+                    : 'top-nav-tab px-3.5 py-2 rounded-full text-beLightMuted dark:text-gray-400 hover:text-beLightInk dark:hover:text-white transition-colors cursor-pointer shrink-0';
+            });
+        }
+
+        document.querySelectorAll('.top-nav-tab').forEach(btn => {
+            btn.addEventListener('click', () => switchViewTab(btn.getAttribute('data-view')));
+        });
+
+        function openContactSection() {
+            switchViewTab('contact');
+            document.getElementById('tab-contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Light (#F9F9F9) / Dark (#0F1115) Mode Toggle
+        function toggleStudioTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            document.getElementById('icon-theme-moon').classList.toggle('hidden', isDark);
+            document.getElementById('icon-theme-sun').classList.toggle('hidden', !isDark);
+        }
+
+        // Copy Email with Toast Feedback
+        function copyEmailWithToast() {
+            const email = 'pankaj.motion@gmail.com';
+            const temp = document.createElement('input');
+            temp.value = email;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            showToast('Copied pankaj.motion@gmail.com to clipboard');
+        }
+
+        document.getElementById('be-contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            e.target.reset();
+            showToast('Inquiry sent! Pankaj Das will reply shortly.');
+        });
+
+        // ---------------------------------------------------------------------
+        // FULL-SCREEN BEHANCE CASE STUDY LIGHTBOX & 60FPS CANVAS PLAYER
+        // ---------------------------------------------------------------------
+        const playerState = {
+            playing: true,
+            progress: 0, // 0 to 1 over 12s loop
+            lastTs: 0,
+            rafId: null,
+            layerMode: 0, // 0 = Final Composite, 1 = Motion Wireframe / Keyframes, 2 = Color & Matte Pass
+            project: null
+        };
+
+        const LAYER_MODES = ['Final Composite', 'Keyframe Wireframe', 'Color & Matte Pass'];
+
+        function toggleCanvasPlayback() {
+            playerState.playing = !playerState.playing;
+            playerState.lastTs = performance.now();
+            document.getElementById('lb-play-text').textContent = playerState.playing ? 'PAUSE' : 'PLAY';
+            document.getElementById('lb-play-icon').setAttribute('data-lucide', playerState.playing ? 'pause' : 'play');
+            lucide.createIcons();
+        }
+
+        function toggleCanvasLayerMode() {
+            playerState.layerMode = (playerState.layerMode + 1) % LAYER_MODES.length;
+            document.getElementById('lb-layer-mode-label').textContent = LAYER_MODES[playerState.layerMode];
+        }
+
+        document.getElementById('lb-scrub-track').addEventListener('click', (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+            playerState.progress = ratio;
+        });
+
+        function animateLightboxCanvas(now) {
+            const modal = document.getElementById('be-lightbox-modal');
+            if (modal.classList.contains('hidden') || !playerState.project) return;
+
+            if (!playerState.lastTs) playerState.lastTs = now;
+            const dt = (now - playerState.lastTs) / 1000;
+            playerState.lastTs = now;
+
+            if (playerState.playing) {
+                playerState.progress = (playerState.progress + dt / 12) % 1;
+            }
+
+            const totalSec = playerState.progress * 12;
+            const sec = String(Math.floor(totalSec)).padStart(2, '0');
+            const frm = String(Math.floor((totalSec % 1) * 60)).padStart(2, '0');
+            document.getElementById('lb-player-timecode').textContent = `00:00:${sec}:${frm} / 00:00:12:00`;
+            document.getElementById('lb-scrub-fill').style.width = `${(playerState.progress * 100).toFixed(2)}%`;
+
+            const canvas = document.getElementById('lb-preview-canvas');
+            const rect = canvas.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            if (rect.width > 0 && rect.height > 0) {
+                const w = Math.floor(rect.width * dpr);
+                const h = Math.floor(rect.height * dpr);
+                if (canvas.width !== w || canvas.height !== h) {
+                    canvas.width = w;
+                    canvas.height = h;
+                }
+
+                const ctx = canvas.getContext('2d');
+                const proj = playerState.project;
+                const c1 = (proj.colors && proj.colors[0]) || '#0057FF';
+                const c2 = (proj.colors && proj.colors[1]) || '#31A8FF';
+                const c3 = (proj.colors && proj.colors[2]) || '#FF9A00';
+                const t = totalSec;
+
+                ctx.fillStyle = playerState.layerMode === 1 ? '#050811' : '#080B14';
+                ctx.fillRect(0, 0, w, h);
+
+                // Background glow or grid based on layer mode
+                if (playerState.layerMode === 1) {
+                    ctx.strokeStyle = 'rgba(49, 168, 255, 0.16)';
+                    ctx.lineWidth = 1 * dpr;
+                    const step = 36 * dpr;
+                    for (let x = 0; x < w; x += step) {
+                        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+                    }
+                    for (let y = 0; y < h; y += step) {
+                        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+                    }
+                } else {
+                    const grad = ctx.createRadialGradient(w * 0.5, h * 0.45, w * 0.04, w * 0.5, h * 0.45, w * 0.6);
+                    grad.addColorStop(0, (playerState.layerMode === 2 ? c3 : c1) + '45');
+                    grad.addColorStop(1, 'rgba(8,11,20,0)');
+                    ctx.fillStyle = grad;
+                    ctx.fillRect(0, 0, w, h);
+                }
+
+                // Rotating Kinetic Geometry
+                ctx.save();
+                ctx.translate(w * 0.5, h * 0.44);
+                const radius = Math.min(w, h) * 0.27;
+                ctx.rotate(t * 0.65);
+                ctx.strokeStyle = playerState.layerMode === 1 ? '#31A8FF' : c2 + '99';
+                ctx.lineWidth = 2.5 * dpr;
+                ctx.setLineDash([16 * dpr, 10 * dpr]);
+                ctx.beginPath();
+                ctx.arc(0, 0, radius, 0, Math.PI * 2);
+                ctx.stroke();
+
+                ctx.rotate(-t * 1.15);
+                ctx.strokeStyle = c3;
+                ctx.setLineDash([10 * dpr, 14 * dpr]);
+                ctx.beginPath();
+                ctx.arc(0, 0, radius * 0.72, 0, Math.PI * 2);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                ctx.restore();
+
+                // Kinetic Title & Tool Strip
+                const bob = Math.sin(t * 2.8) * 5 * dpr;
+                ctx.save();
+                ctx.textAlign = 'center';
+                ctx.fillStyle = '#FFFFFF';
+                ctx.font = `900 ${Math.max(18, Math.floor(w * 0.036))}px "Inter", sans-serif`;
+                ctx.fillText(proj.title.toUpperCase(), w * 0.5, h * 0.44 + bob * 0.35);
+
+                const toolNames = (proj.tools || []).map(c => CC_META[c] ? CC_META[c].name : c).join(' + ');
+                ctx.fillStyle = c2;
+                ctx.font = `700 ${Math.max(11, Math.floor(w * 0.0145))}px "JetBrains Mono", monospace`;
+                ctx.fillText(`${proj.category.toUpperCase()}  •  ${toolNames.toUpperCase()}`, w * 0.5, h * 0.53);
+                ctx.restore();
+
+                // Audio / Keyframe Bars
+                const bars = 28;
+                const span = w * 0.38;
+                const x0 = (w - span) * 0.5;
+                const bw = span / bars;
+                for (let i = 0; i < bars; i++) {
+                    const amp = playerState.playing ? 0.22 + 0.78 * Math.abs(Math.sin(t * 6.5 + i * 0.42)) : 0.25;
+                    const barH = amp * h * 0.065;
+                    ctx.fillStyle = i % 2 === 0 ? c2 : c3;
+                    ctx.fillRect(x0 + i * bw, h * 0.74 - barH, bw * 0.55, barH);
+                }
+            }
+
+            playerState.rafId = requestAnimationFrame(animateLightboxCanvas);
+        }
+
+        function openCaseStudyModal(id) {
+            const p = projects.find(item => item.id === id);
+            if (!p) return;
+
+            activeLightboxId = id;
+            p.views = (Number(p.views) || 0) + 1;
+            saveProjectsToStorage();
+            renderProjectGrid();
+
+            playerState.project = p;
+            playerState.playing = true;
+            playerState.progress = 0;
+            playerState.lastTs = performance.now();
+            playerState.layerMode = 0;
+            document.getElementById('lb-layer-mode-label').textContent = LAYER_MODES[0];
+            document.getElementById('lb-play-text').textContent = 'PAUSE';
+            document.getElementById('lb-play-icon').setAttribute('data-lucide', 'pause');
+
+            document.getElementById('lb-title').textContent = p.title;
+            document.getElementById('lb-category').textContent = p.category;
+            document.getElementById('lb-overview').textContent = p.description;
+            document.getElementById('lb-cover-showcase').innerHTML = renderBespokeCoverSvg(p.theme, p.title, p.category, p.colors || ['#0057FF', '#31A8FF', '#FF9A00']);
+
+            // External Reel Link if provided
+            const extLink = document.getElementById('lb-external-link');
+            if (p.videoUrl) {
+                extLink.href = p.videoUrl;
+                extLink.classList.remove('hidden');
+                extLink.classList.add('inline-flex');
+            } else {
+                extLink.classList.add('hidden');
+                extLink.classList.remove('inline-flex');
+            }
+
+            // Multi-Track Workflow Steps
+            document.getElementById('lb-workflow-tracks').innerHTML = (p.workflow || []).map((step, i) => {
+                const meta = CC_META[step.tool] || CC_META.Ae;
+                return `
+                <div class="p-3.5 rounded-xl bg-gray-50 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 flex items-start gap-3">
+                    <span class="w-8 h-8 rounded-lg ${meta.cls} font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">${step.tool}</span>
+                    <div>
+                        <div class="text-xs font-bold text-beLightInk dark:text-white">Track 0${i + 1} — Adobe ${meta.name}</div>
+                        <p class="text-xs text-beLightMuted dark:text-gray-300 mt-0.5 leading-relaxed">${step.text}</p>
+                    </div>
+                </div>`;
+            }).join('');
+
+            // Color Swatches
+            document.getElementById('lb-color-swatches').innerHTML = (p.colors || ['#0057FF', '#31A8FF', '#FF9A00']).map(hex => `
+                <div class="p-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] flex flex-col gap-1.5">
+                    <span class="w-full h-8 rounded-lg border border-black/10" style="background-color: ${hex};"></span>
+                    <span class="text-[11px] font-mono font-bold text-beLightInk dark:text-gray-200">${hex}</span>
+                </div>
+            `).join('');
+
+            // Deliverables
+            document.getElementById('lb-deliverables-list').innerHTML = (p.deliverables || ['16:9 Master Export', '9:16 Cutdown']).map(d => `
+                <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-beBlue shrink-0"></span>
+                    <span>${d}</span>
+                </li>
+            `).join('');
+
+            // Floating Rail Tools Used
+            document.getElementById('lb-rail-tools').innerHTML = (p.tools || []).map(code => {
+                const meta = CC_META[code] || CC_META.Ae;
+                return `
+                <div class="flex items-center gap-2.5 p-2 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200/80 dark:border-white/10">
+                    <span class="w-7 h-7 rounded-md ${meta.cls} font-extrabold text-xs flex items-center justify-center shrink-0">${code}</span>
+                    <span class="text-xs font-bold text-beLightInk dark:text-white">Adobe ${meta.name}</span>
+                </div>`;
+            }).join('');
+
+            document.getElementById('lb-rail-client').textContent = p.client;
+            document.getElementById('lb-rail-year').textContent = p.year;
+            document.getElementById('lb-rail-impact').textContent = p.impact || 'Client Approved Master';
+
+            updateLightboxLikeControls(p);
+
+            document.getElementById('lb-rail-like-btn').onclick = () => toggleAppreciate(p.id);
+            document.getElementById('lb-bottom-like-btn').onclick = () => toggleAppreciate(p.id);
+            document.getElementById('lb-rail-edit-btn').onclick = () => {
+                closeCaseStudyModal();
+                openWorkManagerModal(p.id);
+            };
+
+            const modal = document.getElementById('be-lightbox-modal');
+            modal.classList.remove('hidden');
+            lucide.createIcons();
+            cancelAnimationFrame(playerState.rafId);
+            playerState.rafId = requestAnimationFrame(animateLightboxCanvas);
+        }
+
+        function closeCaseStudyModal() {
+            document.getElementById('be-lightbox-modal').classList.add('hidden');
+            cancelAnimationFrame(playerState.rafId);
+            activeLightboxId = null;
+        }
+
+        function copyProjectShareLink() {
+            const url = window.location.href.split('#')[0] + (activeLightboxId ? `#project-${activeLightboxId}` : '');
+            const temp = document.createElement('input');
+            temp.value = url;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            showToast('Project link copied to clipboard');
+        }
+
+        // ---------------------------------------------------------------------
+        // LIVE PORTFOLIO EDITOR ("+ ADD / MANAGE WORK" MODAL)
+        // ---------------------------------------------------------------------
+        function openWorkManagerModal(editId = null) {
+            renderManagerExistingList();
+            resetFormToNew();
+
+            if (editId) {
+                populateFormForEdit(editId);
+            }
+
+            const modal = document.getElementById('work-manager-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeWorkManagerModal() {
+            const modal = document.getElementById('work-manager-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function resetFormToNew() {
+            document.getElementById('wm-project-form').reset();
+            document.getElementById('wm-edit-id').value = '';
+            document.getElementById('wm-title-heading').textContent = 'Add / Manage Portfolio Work';
+            document.querySelectorAll('input[name="wm-tools"]').forEach(cb => {
+                cb.checked = (cb.value === 'Ae' || cb.value === 'Pr');
+            });
+        }
+
+        function populateFormForEdit(id) {
+            const p = projects.find(item => item.id === id);
+            if (!p) return;
+            document.getElementById('wm-title-heading').textContent = `Editing: ${p.title}`;
+            document.getElementById('wm-edit-id').value = p.id;
+            document.getElementById('wm-input-title').value = p.title;
+            document.getElementById('wm-input-category').value = p.category;
+            document.getElementById('wm-input-client').value = p.client;
+            document.getElementById('wm-input-year').value = p.year;
+            document.getElementById('wm-input-theme').value = p.theme || 'kinetic';
+            document.getElementById('wm-input-url').value = p.videoUrl || '';
+            document.getElementById('wm-input-deliverables').value = (p.deliverables || []).join(', ');
+            document.getElementById('wm-input-description').value = p.description;
+
+            document.querySelectorAll('input[name="wm-tools"]').forEach(cb => {
+                cb.checked = (p.tools || []).includes(cb.value);
+            });
+        }
+
+        function renderManagerExistingList() {
+            const container = document.getElementById('wm-existing-list');
+            container.innerHTML = projects.map(p => `
+                <div class="p-3 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 flex items-center justify-between gap-3">
+                    <div class="min-w-0">
+                        <div class="font-bold text-xs sm:text-sm text-beLightInk dark:text-white truncate">${p.title}</div>
+                        <div class="text-[11px] text-beLightMuted dark:text-gray-400">${p.category} • ${p.client} • ${(p.tools || []).join(', ')}</div>
+                    </div>
+                    <div class="flex items-center gap-1.5 shrink-0">
+                        <button type="button" onclick="populateFormForEdit('${p.id}')" class="px-2.5 py-1 rounded-lg bg-white dark:bg-white/10 border border-gray-200 dark:border-white/15 text-xs font-bold text-beBlue cursor-pointer">
+                            Edit
+                        </button>
+                        <button type="button" onclick="deleteProjectItem('${p.id}')" class="px-2.5 py-1 rounded-lg bg-red-50 dark:bg-red-500/15 text-xs font-bold text-red-600 dark:text-red-400 cursor-pointer">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function deleteProjectItem(id) {
+            projects = projects.filter(p => p.id !== id);
+            saveProjectsToStorage();
+            renderManagerExistingList();
+            renderProjectGrid();
+            showToast('Project removed from portfolio');
+        }
+
+        function restoreDefaultProjects() {
+            projects = JSON.parse(JSON.stringify(INITIAL_PROJECTS));
+            saveProjectsToStorage();
+            renderManagerExistingList();
+            renderProjectGrid();
+            showToast('Restored all 8 default projects');
+        }
+
+        document.getElementById('wm-project-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const editId = document.getElementById('wm-edit-id').value;
+            const title = document.getElementById('wm-input-title').value.trim();
+            const category = document.getElementById('wm-input-category').value;
+            const client = document.getElementById('wm-input-client').value.trim();
+            const year = document.getElementById('wm-input-year').value.trim() || '2026';
+            const theme = document.getElementById('wm-input-theme').value;
+            const videoUrl = document.getElementById('wm-input-url').value.trim();
+            const description = document.getElementById('wm-input-description').value.trim();
+
+            const chosenTools = Array.from(document.querySelectorAll('input[name="wm-tools"]:checked')).map(cb => cb.value);
+            const tools = chosenTools.length > 0 ? chosenTools : ['Ae', 'Pr'];
+
+            const deliverablesRaw = document.getElementById('wm-input-deliverables').value
+                .split(',')
+                .map(s => s.trim())
+                .filter(Boolean);
+            const deliverables = deliverablesRaw.length > 0 ? deliverablesRaw : ['16:9 Master Export', '9:16 Cutdown'];
+
+            const workflow = tools.map(code => {
+                const name = CC_META[code] ? CC_META[code].name : code;
+                return {
+                    tool: code,
+                    text: `Produced ${category.toLowerCase()} deliverables and timeline assets using Adobe ${name}.`
+                };
+            });
+
+            if (editId) {
+                const idx = projects.findIndex(p => p.id === editId);
+                if (idx !== -1) {
+                    projects[idx] = {
+                        ...projects[idx],
+                        title,
+                        category,
+                        client,
+                        year,
+                        theme,
+                        videoUrl,
+                        tools,
+                        deliverables,
+                        description,
+                        workflow
+                    };
+                }
+                showToast(`Updated "${title}"`);
+            } else {
+                const newEntry = {
+                    id: 'pd-proj-' + Date.now(),
+                    featuredOrder: 0,
+                    title,
+                    category,
+                    client,
+                    year,
+                    tools,
+                    likes: 1,
+                    liked: true,
+                    views: 150,
+                    impact: 'Published Portfolio Master',
+                    theme,
+                    colors: ['#0057FF', '#31A8FF', '#FF9A00'],
+                    videoUrl,
+                    tags: [category, ...tools.map(c => CC_META[c].name)],
+                    deliverables,
+                    description,
+                    workflow
+                };
+                projects.unshift(newEntry);
+                showToast(`Added "${title}" to portfolio`);
+            }
+
+            saveProjectsToStorage();
+            renderManagerExistingList();
+            renderProjectGrid();
+            resetFormToNew();
+        });
+
+        // JSON Backup Export & Import
+        function exportPortfolioJson() {
+            const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(projects, null, 2));
+            const dlAnchor = document.createElement('a');
+            dlAnchor.setAttribute('href', dataStr);
+            dlAnchor.setAttribute('download', 'pankaj-das-portfolio-backup.json');
+            document.body.appendChild(dlAnchor);
+            dlAnchor.click();
+            document.body.removeChild(dlAnchor);
+            showToast('Exported JSON portfolio backup');
+        }
+
+        function importPortfolioJson(event) {
+            const file = event.target.files && event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const imported = JSON.parse(e.target.result);
+                    if (Array.isArray(imported) && imported.length > 0) {
+                        projects = imported;
+                        saveProjectsToStorage();
+                        renderManagerExistingList();
+                        renderProjectGrid();
+                        showToast(`Imported ${imported.length} projects from JSON`);
+                    } else {
+                        showToast('Invalid JSON format');
+                    }
+                } catch (err) {
+                    showToast('Could not parse JSON file');
+                }
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        }
+
+        // Backdrop & Escape Key Modal Closers
+        document.getElementById('be-lightbox-modal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeCaseStudyModal();
+        });
+        document.getElementById('work-manager-modal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeWorkManagerModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeCaseStudyModal();
+                closeWorkManagerModal();
+            }
+        });
+
+        // Initialize on Window Load
+        window.onload = function () {
+            loadProjectsFromStorage();
+            renderProjectGrid();
+        };
+    </script>
+</body>
+</html>
